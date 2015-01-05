@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.archangel.indiana</groupId>
+        <artifactId>indiana-core</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>indiana-ear</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>ear</packaging>
+
+    <name>IndianaEAR</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.archangel.indiana</groupId>
+            <artifactId>indiana-bizz</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>war</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.archangel.indiana</groupId>
+            <artifactId>indiana-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.archangel.indiana</groupId>
+            <artifactId>indiana-client</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <configuration>
+                    <modules>
+                        <webModule>
+                            <groupId>com.archangel.indiana</groupId>
+                            <artifactId>indiana-bizz</artifactId>
+                            <contextRoot>/test</contextRoot>
+                        </webModule>
+                        <jarModule>
+                            <groupId>com.archangel.indiana</groupId>
+                            <artifactId>indiana-common</artifactId>
+                            <bundleDir>/</bundleDir>
+                            <includeInApplicationXml>true</includeInApplicationXml>
+                        </jarModule>
+                        <jarModule>
+                            <groupId>com.archangel.indiana</groupId>
+                            <artifactId>indiana-client</artifactId>
+                            <bundleDir>/</bundleDir>
+                            <includeInApplicationXml>true</includeInApplicationXml>
+                        </jarModule>
+                    </modules>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
