@@ -47,7 +47,7 @@
                         <webModule>
                             <groupId>com.archangel.indiana</groupId>
                             <artifactId>indiana-bizz</artifactId>
-                            <contextRoot>/test</contextRoot>
+                            <contextRoot>/indiana</contextRoot>
                         </webModule>
                         <jarModule>
                             <groupId>com.archangel.indiana</groupId>

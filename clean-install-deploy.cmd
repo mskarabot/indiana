@@ -6,6 +6,6 @@
 
 @pushd %PROJECT_DIR%
 
-@start mvn -X clean install org.wildfly.plugins:wildfly-maven-plugin:1.0.2.Final:deploy
+@start mvn clean install org.wildfly.plugins:wildfly-maven-plugin:1.0.2.Final:deploy
 
 @popd

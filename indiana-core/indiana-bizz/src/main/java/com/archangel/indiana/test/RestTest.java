@@ -18,6 +18,8 @@ import java.util.List;
 public class RestTest
 {
 
+
+    // url http://localhost:8080/indiana/rest/library/json
     @GET
     @Path("/json")
     @Produces(MediaType.APPLICATION_JSON)
