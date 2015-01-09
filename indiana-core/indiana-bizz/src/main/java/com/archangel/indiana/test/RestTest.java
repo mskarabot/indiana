@@ -4,7 +4,6 @@ import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Mihael on 29.12.2014.

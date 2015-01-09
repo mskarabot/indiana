@@ -5,3 +5,5 @@
 @set WILDFLY_HOME=%JBOSS_HOME%
 @set PATH=%M2_HOME%\bin;%PATH%
 @set PROJECT_DIR=%~dp0\indiana-core
+@set PG_HOME=%DEV_HOME%\db\PostgreSQL-9.4
+@set PGDATA=%DEV_HOME%\db\data
